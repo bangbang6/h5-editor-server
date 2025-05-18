@@ -7,13 +7,13 @@ const { ENV } = require("../utils/env");
 
 router.get("/api/db-check", async (ctx) => {
   // 测试 mongodb 连接
-  let mongodbConn;
-  try {
-    mongodbConn = true;
-    await WorkContentModel.findOne();
-  } catch (ex) {
-    mongodbConn = false;
-  }
+  // let mongodbConn;
+  // try {
+  //   mongodbConn = true;
+  //   await WorkContentModel.findOne();
+  // } catch (ex) {
+  //   mongodbConn = false;
+  // }
 
   // 测试 redis
   cacheSet("name", "h5 server OK - by redis");

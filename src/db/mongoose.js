@@ -16,12 +16,16 @@ if (user && password) {
 
 mongoose.set("useCreateIndex", true);
 mongoose.set("useFindAndModify", false);
-
-// 开始连接（ 使用用户名和密码时，需要 `?authSource=admin` ）
-mongoose.connect(`${url}/${dbName}?authSource=admin`, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+try {
+  console.log("url", url, dbName);
+  // 开始连接（ 使用用户名和密码时，需要 `?authSource=admin` ）
+  mongoose.connect(`${url}/${dbName}?authSource=admin`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+} catch (err) {
+  console.log("err", err);
+}
 
 // 连接对象
 const db = mongoose.connection;

@@ -25,7 +25,7 @@ router.get("/api/db-check", async (ctx) => {
   ctx.body = {
     errno: 0,
     data: {
-      name: "h5 server OK",
+      name: "h5 server OK1",
       version: packageInfo.version,
       ENV, // 测试环境量变量
       redisConn: redisTestVal != null,

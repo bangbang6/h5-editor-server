@@ -16,7 +16,6 @@ if (user && password) {
 
 mongoose.set("useCreateIndex", true);
 mongoose.set("useFindAndModify", false);
-console.log("url", url, dbName);
 // 开始连接（ 使用用户名和密码时，需要 `?authSource=admin` ）
 mongoose
   .connect(`${url}/${dbName}?authSource=admin`, {

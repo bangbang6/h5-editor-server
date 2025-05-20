@@ -40,6 +40,10 @@ module.exports = {
 
   // 阿里云 OSS 配置
   aliyunOSSConf: {
+    regin: "oss-cn-hangzhou",
+    accessKeyId: "LTAI5tCSUarydooXKw1SzvVM",
+    accessKeySecret: "GUJmRrkrv05Ka3eFwicxPh9oaIn8h8",
+    bucket: "mw-editor-server",
     // 此处省略 N 行代码
   },
   // 阿里云 OSS CDN 配置
@@ -58,4 +62,11 @@ module.exports = {
 
   // 报警邮箱
   adminMails: ["577174667@qq.com"],
+  // 微信公众号配置
+  // 在本地运行，由于微信 IP 白名单机制，可能运行不了。测试机和线上机是可以的，已添加白名单
+  wxConf: {
+    // 此处省略 N 行代码
+    appId: "wx732afb1c3df06f4c",
+    secret: "046678a69dfe9cd0ea34e09be068ba11",
+  },
 };

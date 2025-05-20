@@ -3,5 +3,19 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    //- 动态引入 css ，参考 src/middlewares/renderWithAssets.js
+    each f in ASSETS_CSS_FILES
+      link(rel='stylesheet', href=f)
+    //- 微信 jssdk
+    if wxJsSdkMainConf
+      script(src='//res.wx.qq.com/open/js/jweixin-1.6.0.js')
+      script window.WX_JSSDK_MAIN_CONF = !{wxJsSdkMainConf}; window.MAIN_SHARE_CONF = !{mainShareConf};
+    if pageType
+      script window.PAGE_TYPE = '#{pageType}';
+    if eventInfoList
+      script window.EVENT_INFO_LIST = !{eventInfoList};
   body
     block content
+    //- 动态引入 js，参考 src/middlewares/renderWithAssets.js
+    each f in ASSETS_JS_FILES
+      script(src=f)

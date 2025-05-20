@@ -15,4 +15,11 @@ module.exports = {
 
   // 查询列表，默认分页配置
   DEFAULT_PAGE_SIZE: 8,
+  /**
+   * @description 常量配置
+   * @author 双越
+   */
+
+  DEFAULT_SHARE_IMG:
+    "https://static.imooc-lego.com/upload-files/528w-0ilmEQMomZ8-108048.png",
 };

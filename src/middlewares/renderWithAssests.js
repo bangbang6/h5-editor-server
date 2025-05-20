@@ -21,11 +21,11 @@ let jsLinks = [];
 cssLinks = cssFiles.map((f) => `/${f}`);
 jsLinks = jsFiles.map((f) => `/${f}`);
 
-// 非 dev 环境，加载 CDN 文件
-if (!isDev) {
-  cssLinks = cssFiles.map((f) => `//${CDNHost}/${uploadPath}/${f}`);
-  jsLinks = jsFiles.map((f) => `//${CDNHost}/${uploadPath}/${f}`);
-}
+// // 非 dev 环境，加载 CDN 文件
+// if (!isDev ) {
+//   cssLinks = cssFiles.map((f) => `//${CDNHost}/${uploadPath}/${f}`);
+//   jsLinks = jsFiles.map((f) => `//${CDNHost}/${uploadPath}/${f}`);
+// }
 
 /**
  * renderWithAssets
